@@ -1,0 +1,108 @@
+\documentclass[10pt]{beamer}
+
+\mode<presentation>
+{
+  \usetheme{boxes}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{structurebold}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+
+  \setbeamertemplate{caption}[numbered]
+}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfig}
+
+\DeclareGraphicsExtensions{.pdf,.png,.jpeg}
+
+
+\definecolor{structurColor}{RGB}{67, 98, 194}
+\definecolor{HHred}{RGB}{242, 56, 90}
+\definecolor{HHblue}{RGB}{52, 56, 68}
+\definecolor{HHturquoise_d}{RGB}{34, 137, 165}
+\definecolor{HHturquoise_m}{RGB}{54, 177, 191}
+\definecolor{HHturquoise_l}{RGB}{74, 217, 217}
+\definecolor{HHwhite}{RGB}{233, 241, 223}
+\definecolor{HHyellow}{RGB}{253, 197, 54}
+\definecolor{HHwhite2}{RGB}{250, 250, 250}
+\definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
+\definecolor{cadmiumorange}{rgb}{0.8, 0.33, 0.0}
+
+\setbeamertemplate{itemize item}[ball]
+\setbeamertemplate{itemize subitem}[circle]
+\setbeamercolor{frametitle}{fg=structurColor}
+\setbeamercolor{structure}{fg=structurColor}
+
+\title{\textcolor{HHwhite}{Search for Higgs pair production at LHC Collider (CERN): The first measurement for Higgs potential and search for new physics}}
+\subtitle{\textcolor{HHwhite}{Ph.D. thesis defence}}
+
+\author{ 
+\textcolor{HHwhite}{
+{\textbf{Mohamed BELFKIR}} \\
+{\and} \\
+{\textit{Supervised by}} \\
+{\textsf{Stephane JEZEQUEL}}
+}
+}
+\date{}
+
+\logo{\insertframenumber/\inserttotalframenumber}
+
+\begin{document}
+\setbeamercolor{background canvas}{bg=HHwhite2}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{Img/figaux_02}}
+\begin{frame}
+\titlepage
+\end{frame}
+}
+
+\section*{Content}
+\begin{frame}{Content}
+\label{content}
+    \tableofcontents
+\end{frame}
+
+\section{Theoretical framework}
+\begin{frame}{Content}
+\label{content}
+    \tableofcontents[currentsection]
+\end{frame}
+
+\input{Part1/Part1}
+
+\section{Experimental setup}
+
+\begin{frame}{Content}
+\label{content}
+    \tableofcontents[currentsection]
+\end{frame}
+
+\subsection{The Large Hadron Collider}
+\begin{frame}{The LHC}
+    
+\end{frame}
+
+\subsection{The ATLAS detector}
+\begin{frame}{The ATLAS detector}
+
+\end{frame}
+
+\subsection{Particles reconstruction}
+\begin{frame}{Particles reconstruction}
+
+\end{frame}
+
+\begin{frame}{More about photons}
+
+\end{frame}
+
+\begin{frame}{More about jets}
+
+\end{frame}
+
+\end{document}
