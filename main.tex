@@ -1,4 +1,4 @@
-\documentclass[10pt]{beamer}
+\documentclass[10pt,aspectratio=169]{beamer}
 
 \mode<presentation>
 {
@@ -16,11 +16,13 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{subfig}
+\usepackage{pgf-pie}
 
 \DeclareGraphicsExtensions{.pdf,.png,.jpeg}
 
 
-\definecolor{structurColor}{RGB}{67, 98, 194}
+%\definecolor{structurColor}{RGB}{67, 98, 194}
+\definecolor{structurColor}{RGB}{67, 102, 194}
 \definecolor{HHred}{RGB}{242, 56, 90}
 \definecolor{HHblue}{RGB}{52, 56, 68}
 \definecolor{HHturquoise_d}{RGB}{34, 137, 165}
@@ -45,17 +47,17 @@
 {\textbf{Mohamed BELFKIR}} \\
 {\and} \\
 {\textit{Supervised by}} \\
-{\textsf{Stephane JEZEQUEL}}
+{\textsf{St\'ephane JEZEQUEL}}
 }
 }
 \date{}
 
 \logo{\insertframenumber/\inserttotalframenumber}
-
+\setbeamercovered{transparent}
 \begin{document}
 \setbeamercolor{background canvas}{bg=HHwhite2}
 {
-\usebackgroundtemplate{\includegraphics[width=\paperwidth]{Img/figaux_02}}
+\usebackgroundtemplate{\includegraphics[width=1.05\paperwidth]{Img/figaux_02}}
 \begin{frame}
 \titlepage
 \end{frame}
@@ -64,45 +66,126 @@
 \section*{Content}
 \begin{frame}{Content}
 \label{content}
-    \tableofcontents
+    \begin{columns}[t]
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={1-5}]
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={6-}]
+        \end{column}
+    \end{columns}
+    %\tableofcontents
 \end{frame}
 
 \section{Theoretical framework}
 \begin{frame}{Content}
 \label{content}
-    \tableofcontents[currentsection]
+    \begin{columns}[t]
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={1-5},currentsection]
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={6-},currentsection]
+        \end{column}
+    \end{columns}
 \end{frame}
-
 \input{Part1/Part1}
 
 \section{Experimental setup}
 
 \begin{frame}{Content}
 \label{content}
-    \tableofcontents[currentsection]
+    \begin{columns}[t]
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={1-5},currentsection]
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={6-},currentsection]
+        \end{column}
+    \end{columns}
 \end{frame}
 
-\subsection{The Large Hadron Collider}
-\begin{frame}{The LHC}
-    
+\input{Part2/Part2}
+
+\section{Measurement of Higgs self-coupling}
+
+\begin{frame}{Content}
+\label{content}
+    \begin{columns}[t]
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={1-5},currentsection]
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={6-},currentsection]
+        \end{column}
+    \end{columns}
 \end{frame}
 
-\subsection{The ATLAS detector}
-\begin{frame}{The ATLAS detector}
+\input{Part3/Part3}
 
+\section{Prospects at Run-3 and HL-LHC}
+
+\begin{frame}{Content}
+\label{content}
+    \begin{columns}[t]
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={1-5},currentsection]
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={6-},currentsection]
+        \end{column}
+    \end{columns}
 \end{frame}
 
-\subsection{Particles reconstruction}
-\begin{frame}{Particles reconstruction}
+\input{Part4/Part4}
 
+\section{Interpretation using Effective Field Theory}
+
+\begin{frame}{Content}
+\label{content}
+    \begin{columns}[t]
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={1-5},currentsection]
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={6-},currentsection]
+        \end{column}
+    \end{columns}
 \end{frame}
 
-\begin{frame}{More about photons}
+\input{Part5/Part5}
 
+{
+\usebackgroundtemplate{\includegraphics[width=1.03\paperwidth]{Img/figaux_01}}
+\begin{frame}
+\end{frame}
+}
+
+\section{Photon identification using Convolutional Neural Network}
+
+\begin{frame}{Content}
+\label{content}
+    \begin{columns}[t]
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={1-5},currentsection]
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \tableofcontents[sections={6-},currentsection]
+        \end{column}
+    \end{columns}
 \end{frame}
 
-\begin{frame}{More about jets}
+\input{Part6/Part6}
 
+{
+\usebackgroundtemplate{\includegraphics[width=1.2\paperwidth]{Img/figaux_01}}
+\begin{frame}
 \end{frame}
+}
+
+
+\section{Conclusion}
+
+\input{Part7/Part7}
 
 \end{document}
