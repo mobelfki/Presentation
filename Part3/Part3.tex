@@ -1,37 +1,60 @@
 \subsection{Analysis strategy}
 
-\begin{frame}{Object and event selection}
+\begin{frame}{Signal and background}
+   \begin{itemize}
+       \item Signal: HH$\to b\bar{b}\gamma\gamma$
+       \item Backgrounds: 
+       \begin{itemize}
+           \item irreducible single H$\to\gamma\gamma$:
+           \begin{itemize}
+               \item resonant (in $m_{b\bar{b}}$): \textbf{ZH} 
+               \item non-resonant: ggH, \textbf{$t\bar{t}$H}, WH
+           \end{itemize}
+           \item reducible continuum $\gamma\gamma$ + jets
+       \end{itemize}
+   \end{itemize}
+\end{frame}
 
+
+\begin{frame}{event selection}
 \begin{columns}
 \column{0.6\textwidth}
 
 \begin{itemize}
     \item \textbf{Di-photon trigger} (83\% efficiency for signal)
-    \item Neural Network primary vertex
+    \begin{itemize}
+        \item $E_{T}^{\gamma} > $ 35 (25) GeV for leading (sub-leading)
+    \end{itemize}
     \item \textbf{$\geq $ 2 Tight} and \textbf{isolated} \textbf{photons} (\textbf{\textcolor{HHturquoise_d}{H$\to\gamma\gamma$}}):
     \begin{itemize}
-        \item $\frac{p_{T}^{\gamma}}{m_{\gamma\gamma}} > $ 35\% (25\%) for leading (subleading)
+        \item $\frac{p_{T}^{\gamma}}{m_{\gamma\gamma}} > $ 35\% (25\%) for leading (sub-leading)
     \end{itemize}
     \item \textbf{Exactly 2 $b$-jet} (\textbf{\textcolor{HHred}{H$\to b\bar{b}$}}):
     \begin{itemize}
-        \item particle flow jet ($p_{T} > $ 25 GeV \& $|\eta| < $ 2.5)
-        \item $b$-tagging: DL1r with 77\% efficiency
+        \item $p_{T} > $ 25 GeV \& $|\eta| < $ 2.5
+        \item $b$-tagging at 77\% efficiency
     \end{itemize}
 \end{itemize}
 
 
 
-\textcolor{gray}{less than 6 jets} \\
-\textcolor{gray}{zero leptons (electrons or muons)}
+\textcolor{gray}{less than 6 jets : hadronic $t\bar{t}$H} \\
+\textcolor{gray}{zero leptons : semi-leptonic $t\bar{t}$H}
 
 \column{0.4\textwidth}
 
 \begin{figure}
     \centering
     \includegraphics[width=1.1\textwidth]{Part3/Img/myy_common.pdf}
-    
 \end{figure}
+\begin{center}
+\textbf{Dominant backgrounds}
+\begin{itemize}
+    \item \textbf{\textcolor{HHyellow}{Single H$\to\gamma\gamma$}}: \textbf{$t\bar{t}$H} + \textbf{ZH} 
+    \item \textcolor{HHturquoise_m}{\textbf{Continuum $\gamma\gamma$ + jets}}
+\end{itemize}
 
+\end{center}
 %\begin{figure}
 %    \centering
 %    \includegraphics[width=0.7\textwidth]{Part3/Img/pie.png}
@@ -46,7 +69,7 @@
 \column{0.4\textwidth}
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{Part3/Img/b-jet-nobkg.png}
+    \includegraphics[width=0.8\textwidth]{Part3/Img/b-jet.png}
 \end{figure}
 
 \column{0.6\textwidth}
@@ -56,13 +79,13 @@
     \item $\sigma_{m_{b\bar{b}}}\sim$ 16 GeV, $\sigma_{m_{\gamma\gamma}}\sim$ 2 GeV
     \item Standard calibration not enough, due to: 
     \begin{itemize}
-        \item \textcolor{HHred}{\textbf{semi-leptonic}} decay $\to$ \textcolor{HHturquoise_d}{\textbf{missing neutrino}}
-        \item \textcolor{HHturquoise_d}{\textbf{large $b$-quark mass}}
+        \item \textcolor{HHred}{\textbf{semi-leptonic}} decay $\to$ \textbf{missing neutrino}
+        \item \textcolor{HHturquoise_d}{\textbf{large $b$-quark mass}} $\to$ \textbf{out-of-cone} radiation
     \end{itemize}
 \pause    
     \item Decoupled $b$-jet energy calibration method
     \begin{itemize}
-        \item Adding soft muon, \textcolor{HHred}{\textbf{$\mu$-in-jet correction}}
+        \item Adding muon, \textcolor{HHred}{\textbf{$\mu$-in-jet correction}}
         \item $p_T$ rescaling, \textcolor{HHturquoise_d}{\textbf{$p_T$Reco correction}}
     \end{itemize}
 \end{itemize}
@@ -73,12 +96,13 @@
 \begin{columns}
 \column{0.5\textwidth}
 \begin{itemize}
-    \item \textcolor{HHred}{\textbf{$\mu$-in-jet}}
+    \item \textcolor{HHred}{\textbf{$\mu$-in-jet} correction}
     \begin{itemize}
-        \item Adding back \textbf{medium} muons
-        \item Variable $\Delta R$ 
+        \item Adding back muons
+        \item Variable $\Delta R$($b$-jet, muon) 
+        \item Semi-leptonic or hadronic
     \end{itemize}
-    \item \textcolor{HHturquoise_d}{\textbf{$p_T$Reco}}
+    \item \textcolor{HHturquoise_d}{\textbf{$p_T$Reco} correction}
     \begin{itemize}
         \item $p_T$-dependent scale factor
         \item Computed on \textbf{$t\bar{t}$ sample}
@@ -103,6 +127,7 @@
 \begin{itemize}
     \item \textcolor{HHred}{\textbf{$\sim$ 22\%}} imp. on $m_{b \bar{b}}$ resolution
     \item \textcolor{HHred}{\textbf{7\%$\pm$2\%}} imp. on expected significance
+    \item \textsl{\textbf{Baseline $b$-jet correction} for full Run-2 HH search}
 \end{itemize}
 
 \end{columns}    
@@ -153,24 +178,24 @@ BSM scenarios}}
 \begin{columns}
 \column{0.6\textwidth}
 \begin{itemize}
-    \item Two MVA trained to discriminate signal from backgrounds:
+    \item Two MVA are trained to discriminate signal from the backgrounds:
     \begin{itemize}
-        \item Low mass: \textbf{\textcolor{HHred}{SM HH ($\kappa_{\lambda} = $1)}}
-        \item High mass: \textbf{\textcolor{HHturquoise_d}{BSM HH $\kappa_{\lambda} = $10}}
+        \item \textbf{High mass}: \textbf{\textcolor{HHred}{SM HH ($\kappa_{\lambda} = $1)}}
+        \item \textbf{Low mass}: \textbf{\textcolor{HHturquoise_d}{BSM HH ($\kappa_{\lambda} = $10)}}
     \end{itemize}
     \item Similar features: object and event kinematic
     \item MVA techniques: 
     \begin{itemize}
-        \item \textcolor{structurColor}{\textbf{B}oosted \textbf{D}ecision \textbf{T}rees}: signal vs ($t\bar{t}$H + ZH + continuum $\gamma\gamma$)
-        \item \textbf{D}eep \textbf{N}eural \textbf{N}etwork: multi-classification
+        \item \textcolor{structurColor}{\textbf{B}oosted \textbf{D}ecision \textbf{T}rees}: signal vs ($t\bar{t}$H + ZH + continuum $\gamma\gamma$ + jets)
+        \item \textbf{D}eep \textbf{N}eural \textbf{N}etwork: signal vs $t\bar{t}$H vs ZH vs continuum $\gamma\gamma$ + jets
     \end{itemize}
 \end{itemize}  
 
 \column{0.4\textwidth}
 
 \begin{figure}
-    \centering
-    \includegraphics[width=1.\textwidth]{Part3/Img/MV_var.png}
+    
+    \includegraphics[width=1.\textwidth]{Part3/Img/MVA_vars.png}
 \end{figure}
 \textcolor{gray}{$^{*}$ not used in DNN} \\
 
@@ -183,26 +208,27 @@ BSM scenarios}}
 \begin{columns}
 \column{0.4\textwidth}
 \begin{itemize}
-    \item Dense network with 4 outputs
-    \item $d_{HH}$ discriminates
+    \item $d_{HH}$ discriminates from 4 probabilities: 
     \begin{equation*}
-        d_{HH} = \frac{\sigma_{HH}.p_{HH}}{\sum{\sigma_{bkg}.p_{bkg}}}
+        d_{HH} = \log(\frac{\sigma_{HH}.p_{HH}}{\sum^{3}{\sigma_{bkg}.p_{bkg}}})
     \end{equation*}
-    \item Good modelling of $d_{HH}$
     \item \textbf{\textcolor{HHred}{4 categories}} maximize combined expected significance 
-    \item \textbf{\textcolor{HHturquoise_d}{Similar performance to the BDT}}
+    \begin{itemize}
+        \item \textbf{tight} and \textbf{loose} MVA for each mass region
+    \end{itemize}
     \onslide<3>{
-    \item baseline: \textbf{BDT}
-    \item DNN for next analysis round
+    \item \textbf{\textcolor{HHturquoise_d}{Similar performance to the BDT}}
+    \item baseline: \textcolor{HHred}{\textbf{BDT}}
+    \item \textsl{\textbf{DNN} reserved for next analysis round}
     }
 \end{itemize}
 \onslide<2-3>{
 \column{0.6\textwidth}
 \begin{figure}
     \centering
-    \fcolorbox{gray}{HHwhite2}{
+    
      \includegraphics[width=0.65\textwidth]{Part3/Img/dHH_SM.pdf} 
-     }
+     
  %   \subfloat{ \includegraphics[width=0.55\textwidth]{Part3/Img/dHH_BSM.pdf}}
 \end{figure}
 }
@@ -211,7 +237,7 @@ BSM scenarios}}
     \centering
     \begin{tabular}{lcc}
     \hline\hline
-        MVA & SM HH & HH $\kappa_{\lambda}$ \\
+        MVA & SM HH & HH $\kappa_{\lambda} = $10 \\
         \hline
         BDT & 0.49 & 3.59 \\
         DNN & 0.54 & 3.47 \\
@@ -219,59 +245,69 @@ BSM scenarios}}
     \end{tabular}
 \end{table}
 \begin{center}
-  \textcolor{gray}{$Z = \sqrt{2[(s+b)\times\log{1+s/b}-2]}$}  
+  \textcolor{gray}{significance $ = \sqrt{2[(s+b)\times\log{1+s/b}-2]}$}  
 \end{center}
 }
 \end{columns}
 \end{frame}
 
-\begin{frame}{Signal extraction}
-\begin{columns}
-\column{0.5\textwidth}    
+%\begin{frame}{Signal extraction}
+%\begin{columns}
+%\column{0.5\textwidth}    
     
-\begin{itemize}
-    \item \textcolor{structurColor}{$m_{\gamma\gamma}$ modelling in the 4 categories}
-    \item \textbf{\textcolor{red}{HH signal} (ggF + VBF)}: 
-    \begin{itemize}
-        \item \textbf{from Monte Carlo}
-        \item \textbf{Yield parametrized as a function of $\kappa_{\lambda}$}
-        \item Double-sided Crystal-Ball (DSCB)
-    \end{itemize}
-    \item \textbf{\textcolor{red}{Single Higgs}}: 
-    \begin{itemize}
-        \item \textbf{from Monte Carlo}
-        \item Same PDF as the signal (injection test)
-    \end{itemize}
-    \item \textbf{\textcolor{blue}{Continuum $\gamma\gamma$}}:
-    \begin{itemize}
-        \item \textbf{fully data driven}
-        \item smoothly falling analytic function 
-        \item Spurious signal test: quantify model bias $\to$ systematic uncertainty
-    \end{itemize}
-\end{itemize}    
-    
-\column{0.5\textwidth}
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth]{Part3/Img/myysketch.png}
-\end{figure}
-\end{columns}
-    
-\end{frame}
+%\begin{itemize}
+%    \item \textcolor{HHturquoise_d}{$m_{\gamma\gamma}$ modelling in the 4 analysis categories}
+%    \item \textbf{\textcolor{red}{HH signal} (ggF + VBF)}: 
+%    \begin{itemize}
+%        \item \textbf{from Monte Carlo}
+%        \item \textbf{Yield parametrized as a function of $\kappa_{\lambda}$}
+%        \item Double-sided Crystal-Ball (DSCB)
+%    \end{itemize}
+%    \item \textbf{\textcolor{red}{Single Higgs}}: 
+%    \begin{itemize}
+%        \item \textbf{from Monte Carlo}
+%        \item Same PDF as the signal (injection test)
+%    \end{itemize}
+%    \item \textbf{\textcolor{blue}{Continuum $\gamma\gamma$}}:
+%    \begin{itemize}
+%        \item \textbf{fully data driven}
+%        \item smoothly falling analytic function 
+%        \item Spurious signal test: quantify model bias $\to$ systematic uncertainty
+%    \end{itemize}
+%\end{itemize}    
+%    
+%\column{0.5\textwidth}
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=0.8\textwidth]{Part3/Img/myysketch.png}
+%\end{figure}
+%\end{columns}
+%    
+%\end{frame}
 
 \subsection{Higgs self-coupling constrain}
 
 \begin{frame}{Fit results}
 
 \begin{columns}
-\column{0.5\textwidth}
+\column{0.6\textwidth}
 \begin{itemize}
-    \item Simultaneous fit 
-    \item \textbf{\textcolor{HHred}{No significance SM HH signal observed}}
-    \item Upper limits as a function of $\kappa_{\lambda}$ on $\sigma_{HH}$
+    \item Simultaneous 1D fit of \textbf{$m_{\gamma\gamma}$} in the 4 analysis categories
+    \begin{itemize}
+        \item \textbf{\textcolor{HHred}{HH signal} (ggF + VBF) + \textcolor{HHred}{Single Higgs}}: 
+        \begin{itemize}
+            \item \textbf{from Monte Carlo} using Double-sided Crystal-Ball
+        \end{itemize}
+       \item \textbf{\textcolor{HHturquoise_d}{Continuum $\gamma\gamma$ + jets}}:
+       \begin{itemize}
+           \item \textbf{fully data driven}
+       \end{itemize}
+    \end{itemize}
+    \item \textbf{\textcolor{HHred}{No significant signal is observed}}
+    \item Upper limits at 95\% CL on $\sigma_{HH}$ as a function of $\kappa_{\lambda}$ are set
 \end{itemize}
 
-\column{0.5\textwidth}
+\column{0.4\textwidth}
 
 \begin{figure}
     \centering
@@ -301,7 +337,7 @@ BSM scenarios}}
 \column{0.6\textwidth}
 
 \begin{itemize}
-    \item $\frac{\sigma_{HH}}{\sigma_{HH}^{SM}}$ limit: \textbf{\textcolor{HHred}{4.1}} (Exp. \textbf{5.5}) 
+    \item $\frac{\sigma_{HH}}{\sigma_{HH}^{SM}}$ limit: \textbf{\textcolor{HHred}{4.1}} (Exp. \textbf{5.5}) at 95\% CL
     \item $\kappa_{\lambda}$ constrain: \textbf{\textcolor{HHred}{[-1.5, 6.7]}} (Exp. \textbf{[-2.4, 7.7]})
     \pause
     \item \textbf{Statistically limited}
@@ -321,7 +357,7 @@ BSM scenarios}}
         \end{itemize}
     \end{itemize}
     \pause
-    \item HH$\to b\bar{b}\tau^+\tau^-$ $\frac{\sigma_{HH}}{\sigma_{HH}^{SM}}$ limit: \textcolor{HHred}{\textbf{4.7}} (Exp. \textbf{3.9})
+  %  \item HH$\to b\bar{b}\tau^+\tau^-$ $\frac{\sigma_{HH}}{\sigma_{HH}^{SM}}$ limit: \textcolor{HHred}{\textbf{4.7}} (Exp. \textbf{3.9})
 \end{itemize}
 \end{columns}
 \end{frame}
@@ -336,7 +372,7 @@ BSM scenarios}}
     \begin{itemize}
         \item 14 categories
         \begin{itemize}
-            \item \textbf{MVA output} and \textbf{$m_{b\bar{b}\gamma\gamma}$}
+            \item \textbf{MVA output} and \textbf{$m_{b\bar{b}\gamma\gamma}^{*}$}
             \item \textbf{2 dedicated VBF categories} 
         \end{itemize}
         \item \textcolor{HHturquoise_d}{\textbf{2D fit}} $m_{\gamma\gamma}\times m_{b\bar{b}}$
